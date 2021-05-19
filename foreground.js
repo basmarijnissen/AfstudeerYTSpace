@@ -1,0 +1,1 @@
+document.querySelector(".ytd-subscribe-button-renderer").classList.add('spinspinspin')
