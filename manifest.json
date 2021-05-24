@@ -3,6 +3,14 @@
     "description": "my ext",
     "version": "0.1",
     "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.youtube.com/watch?v=*"
+            ],
+            "js": ["content.js"]
+        }
+    ],
     "background": {
         "scripts": ["./background.js"]
     },
