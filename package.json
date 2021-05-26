@@ -5,9 +5,16 @@
   "main": "webpack.common.js",
   "dependencies": {},
   "devDependencies": {
+    "@polymer/polymer": "^2.8.0",
+    "@webcomponents/shadycss": "^1.10.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "copy-webpack-plugin": "^9.0.0",
+    "emoji-slider": "^0.2.0",
+    "eslint": "^7.27.0",
     "html-webpack-plugin": "^5.3.1",
+    "lit-element": "^2.5.1",
+    "ts-loader": "^9.2.2",
+    "typescript": "^4.2.4",
     "webpack": "^5.37.1",
     "webpack-cli": "^4.7.0",
     "write-file-webpack-plugin": "^4.5.1"

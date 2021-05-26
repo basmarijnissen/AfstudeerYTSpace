@@ -5,9 +5,8 @@ var __webpack_exports__ = {};
   \******************************/
 chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
     if (changeInfo.status == 'complete') {
-  console.log("script loaded")
-  chrome.tabs.executeScript(null, {file: "foreground.bundle.js"}, () => console.log('i saved'))
-    }
+  chrome.tabs.executeScript(null, {file: "foreground.bundle.js"}, () => console.log('script loaded'))
+} 
   })
   
 /******/ })()
