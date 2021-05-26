@@ -1,23 +1,45 @@
-var balk = document.getElementsByClassName('ytp-right-controls')[0];
-var video = document.getElementsByClassName('ytp-chrome-controls')[0];
-var blokje = document.createElement("div"),
-    popup = document.createElement("div");
-var iconURL = chrome.extension.getURL("images/icoon.svg");
-var popuptext = document.getElementsByClassName('popuptext')[0];
+var YTBalkrechts = document.getElementsByClassName('ytp-right-controls')[0],
+    YTBalk = document.getElementsByClassName('ytp-chrome-controls')[0],
+    icoon = document.createElement("div"),
+    popup = document.createElement("div"),
+    iconURL = chrome.extension.getURL("images/icoon.svg");
 
-blokje.classList.add("ytp-button");
-balk.prepend(blokje); 
-blokje.innerHTML = "<img src='" + iconURL + "'id='buttonimage'>";
+import 'emoji-slider';
 
+//voeg button class toe aan icoon 
+icoon.classList.add("ytp-button");
+//voeg icoon toe aan balk
+YTBalkrechts.prepend(icoon); 
+//plak het plaatje in icoon
+icoon.innerHTML = "<img src='" + iconURL + "'id='buttonimage'>";
+
+//voeg de popup toe aan het venster
 popup.classList.add("popup");
-video.append(popup);
-popup.innerHTML +=  "<span class='popuptext' id='myPopup'>Popup text...</span>";
+YTBalk.append(popup);
+popup.innerHTML +=  "<span class='popuptext' id='myPopup'></span>";
 
-blokje.onclick = function() { 
+//voeg de emotieslider toe aan de popup
+var popuptext = document.getElementsByClassName('popuptext')[0];
+popuptext.innerHTML += "<emoji-slider id=PleasureSlider></emoji-slider>";
+const PleasureSlider = document.querySelector('#PleasureSlider');
+
+PleasureSlider.addEventListener('change', () => {
+    const v = PleasureSlider.value;
+    if (v < 0.2) {
+        PleasureSlider.emoji = '🙁';
+    } else if (v < 0.4) {
+        PleasureSlider.emoji = '😕';
+    } else if (v < 0.6) {
+        PleasureSlider.emoji = '😐';
+    } else if (v < 0.8) {
+        PleasureSlider.emoji = '🙂';
+    } else {
+        PleasureSlider.emoji = '😀';
+    }
+  });
+
+icoon.onclick = function() { 
     var popup = document.getElementsByClassName('popup')[0];
     popup.classList.toggle("show");
     popuptext.classList.toggle('show');
-}
-
-popuptext.innerHTML += "<emoji-slider emoji='😍'></emoji-slider>";
-
+};

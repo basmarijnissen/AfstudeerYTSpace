@@ -39,17 +39,17 @@ var options = {
     rules: [
       {
         test: /\.css$/,
-        loader: "style-loader!css-loader",
+        use: "style-loader!css-loader",
         exclude: /node_modules/
       },
       {
         test: new RegExp('.(' + fileExtensions.join('|') + ')$'),
-        loader: "file-loader?name=[name].[ext]",
+        use: "file-loader?name=[name].[ext]",
         exclude: /node_modules/
       },
       {
         test: /\.html$/,
-        loader: "html-loader",
+        use: "html-loader",
         exclude: /node_modules/
       }
     ]
@@ -62,17 +62,23 @@ var options = {
     new CleanWebpackPlugin(),
     // expose and write the allowed env vars on the compiled bundle
     new webpack.EnvironmentPlugin(["NODE_ENV"]),
-    new CopyWebpackPlugin([{
-      from: "src/manifest.json",
-      transform: function (content, path) {
-        // generates the manifest file using the package.json informations
-        return Buffer.from(JSON.stringify({
-          description: process.env.npm_package_description,
-          version: process.env.npm_package_version,
-          ...JSON.parse(content.toString())
+    
+    new CopyWebpackPlugin (
+      {
+        patterns: [
+          { from: "src/manifest.json",
+          transform: function (content, path) {
+            // generates the manifest file using the package.json informations
+            return Buffer.from(JSON.stringify({
+              description: process.env.npm_package_description,
+              version: process.env.npm_package_version,
+              ...JSON.parse(content.toString())
         }))
       }
-    }]),
+    }
+        ]
+    }),
+
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src", "popup.html"),
       filename: "popup.html",
