@@ -9,11 +9,11 @@
   grid-template-rows: 1/6 1/3 1/6 1/3;
 }
 
-#emoji, #emoji2 {
+#emoji1, #emoji2 {
   font-size: 3.5em;
   text-align: center;
 }
-#emoji {
+#emoji1 {
   grid-row: 2/3;
   grid-column: 1/2;
 }
