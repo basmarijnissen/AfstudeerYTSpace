@@ -21,8 +21,9 @@
     "permissions": [
         "tabs",
         "https://www.youtube.com/watch?v=*",
-        "https://www.raw.githubusercontent.com/",
-        "storage"
+        "https://www.youtube.com/",
+        "storage",
+        "activeTab"
     ],
     "web_accessible_resources": ["images/icoon.svg", "icoon.svg", "foreground.css"]
 }

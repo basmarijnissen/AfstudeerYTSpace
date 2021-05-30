@@ -9,7 +9,7 @@ var balk = document.getElementsByClassName('ytp-right-controls')[0],
     popup = document.createElement("div"),
     iconURL = chrome.extension.getURL("images/icoon.svg");
 
-//plaats icoon in balk
+//plaats inhoud in balk
 blokje.classList.add("ytp-button");
 balk.prepend(blokje); 
 blokje.innerHTML = "<img src='" + iconURL + "'id='buttonimage'>";
@@ -29,13 +29,11 @@ blokje.onclick = function() {
 
 //plezier
 popuptext.innerHTML += "<div id=pleziertekst></div><input id='plezierslider' class='emojislider' type='range' value='0' min='0' max='9' step='1'>";
-var plezierslider = document.getElementById('plezierslider');
 var pleziertekst = document.getElementById('pleziertekst');
 pleziertekst.textContent = 'Geeft de video jou plezier?';
 
 //enthousiasme
 popuptext.innerHTML += "<div id=enthousiasmetekst></div><input id='enthousiasmeslider' class='emojislider' type='range' value='0' min='0' max='9' step='1'>";
-var enthousiasmeslider = document.getElementById('enthousiasmeslider');
 var enthousiasmetekst = document.getElementById('enthousiasmetekst');
 enthousiasmetekst.textContent = 'Maakt de video jou enthousiast?';
 
