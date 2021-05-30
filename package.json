@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "YTspace",
   "main": "webpack.common.js",
-  "dependencies": {},
+  "dependencies": {
+    "uuid": "^8.3.2"
+  },
   "devDependencies": {
     "@polymer/polymer": "^2.8.0",
     "@webcomponents/shadycss": "^1.10.2",
