@@ -4,15 +4,23 @@ var balk = document.getElementsByClassName('ytp-right-controls')[0],
     popup = document.createElement("div"),
     iconURL = chrome.extension.getURL("images/icoon.svg");
 
+//laad css
+var link = document.createElement("link");
+link.href = chrome.extension.getURL("/foreground.css");
+link.type = "text/css";
+link.rel = "stylesheet";
+document.getElementsByTagName("head")[0].appendChild(link);
+
 //plaats inhoud in balk
 blokje.classList.add("ytp-button");
 balk.prepend(blokje); 
 blokje.innerHTML = "<img src='" + iconURL + "'id='buttonimage'>";
 
-//plaats popup
 popup.classList.add("popup");
-video.append(popup);
 popup.innerHTML +=  "<span class='popuptext' id='myPopup'><div id=emoji1>😐</div><div id=emoji2>🙁</div></span>";
+video.append(popup);
+
+//plaats popup
 var popuptext = document.getElementsByClassName('popuptext')[0];
 
 //als knop geklikt wordt, laat de popup zien

@@ -9,7 +9,7 @@
                 "https://www.youtube.com/watch?v=*"
             ],
             "js": ["content.bundle.js"],
-            "css": ["foreground.css"]
+            "css": ["foreground.css", "overlay.css"]
         }
     ],
     "background": {
@@ -25,5 +25,5 @@
         "storage",
         "activeTab"
     ],
-    "web_accessible_resources": ["images/icoon.svg", "icoon.svg", "foreground.css"]
+    "web_accessible_resources": ["images/icoon.svg", "icoon.svg", "foreground.css", "overlay.css"]
 }
