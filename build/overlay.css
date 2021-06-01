@@ -1,0 +1,15 @@
+.overlay {
+    position: absolute;
+    z-index: 9999999999999;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(44, 44, 44, 0.795);
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto 20% 30% auto;
+}
+
+.overlaytitel {
+    font-size: 24pt;
+    text-align: center;
+}

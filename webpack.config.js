@@ -25,7 +25,8 @@ var options = {
     options: path.join(__dirname, "src", "js", "options.js"),
     background: path.join(__dirname, "src", "js", "background.js"),
     foreground: path.join(__dirname, "src", "js", "foreground.js"),
-    content: path.join(__dirname, "src", "js", "content.js")
+    content: path.join(__dirname, "src", "js", "content.js"),
+    pauzeren: path.join(__dirname, "src", "js", "pauzeren.js")
   },
   chromeExtensionBoilerplate: {
     notHotReload: ["content"]
