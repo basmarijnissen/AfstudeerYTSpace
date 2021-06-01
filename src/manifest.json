@@ -25,5 +25,14 @@
         "storage",
         "activeTab"
     ],
-    "web_accessible_resources": ["images/icoon.svg", "icoon.svg", "foreground.css", "overlay.css"]
+    "web_accessible_resources": ["images/icoon.svg",
+        "icoon.svg",
+        "foreground.css",
+        "overlay.css",
+        "icoon1.svg",
+        "icoon2.svg",
+        "icoon3.svg",
+        "images/categorie/icoon1.svg",
+        "images/categorie/icoon2.svg",
+        "images/categorie/icoon3.svg"]
 }

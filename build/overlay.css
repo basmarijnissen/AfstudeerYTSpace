@@ -1,15 +1,42 @@
 .overlay {
-    position: absolute;
-    z-index: 9999999999999;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(44, 44, 44, 0.795);
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: auto 20% 30% auto;
+  position: absolute;
+  z-index: 9999999999999;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.795);
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: auto 20% 30% auto;
 }
 
 .overlaytitel {
-    font-size: 24pt;
-    text-align: center;
+  grid-row: 2/3;
+  grid-column: 2/5;
+  font-size: 24pt;
+  text-align: center;
+  color: white;
+}
+
+.knop {
+  margin: auto;
+  height: 50%;
+  width: 50%;
+}
+.icoon1 {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+
+.icoon2 {
+  grid-row: 3/4;
+  grid-column: 3/4;
+}
+
+.icoon3 {
+  grid-row: 3/4;
+  grid-column: 4/5;
+}
+
+.hideoverlay {
+  visibility: hidden;
 }
